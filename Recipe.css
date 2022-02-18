@@ -17,8 +17,8 @@ div.category{
 }
 div.content{
     background-color:white;
-    margin: 0% 10% 20% 10% ;
-    padding: 10px 20px 20px 20px;
+    margin: 0% 2% 10% 2% ;
+    padding: 10px 5px 20px 5px;
     box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.2);
 }
 div.line{
@@ -37,6 +37,12 @@ h3.description{
 }
 div.description {
     text-align:center
+}
+img.imgc{
+    width:100%;
+    display:block;
+    max-height:400px;
+    object-fit: cover;
 }
 div.image{
     background-color:rgb(212, 212, 212);
@@ -59,15 +65,14 @@ table.table1 td{
 
 div.col1{
     background-color: aquamarine;
-    width:45%;
+    width:100%;
     display: inline-block;
     margin-top:10px
 
 }
 div.col2{
     /*background-color: rgb(47, 92, 77);*/
-    width:45%;
-    float: right;
+    width:100%;
     margin-top:10px
     
 }
@@ -84,14 +89,45 @@ div.col2 h3{
 }
 div.ingredients p{
     text-align: center;
-    border: 1px solid rgb(133, 131, 131);
+    border: 1px solid rgba(133, 131, 131,0.4);
     padding: 5px 0;
     margin: 3px;
 }
-ol.instructions li{
-    padding:5px
+ol.instructions{
+    padding:0 0 0 20px
 }
-*{
+ol.instructions li{
+    padding:2px;
+    border-bottom:1px solid rgba(133, 131, 131,0.2);
+}
+* {
     overflow: auto
 }
  /* comment css */
+ @media only screen and (min-width: 768px) {
+    div.content{
+        margin: 0% 10% 20% 10% ;
+        padding: 10px 20px 20px 20px;
+    }
+    ol.instructions{
+        padding:0 0 0 20px
+    }
+    ol.instructions li{
+        padding:5px
+    } 
+    div.col1{
+        width:45%;
+    }  
+    div.col2{
+        /*background-color: rgb(47, 92, 77);*/
+        width:45%;
+        float: right;
+    }
+ }
+ @media only screen and (min-width: 900px) {
+    div.content{
+        margin: 0% auto 10% auto ;
+        width:660px
+
+    }
+ }
